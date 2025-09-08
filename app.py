@@ -55,7 +55,7 @@ if "editar_index" not in st.session_state:
 # ---------------------------
 st.image("https://upload.wikimedia.org/wikipedia/commons/0/0b/Field_hockey_stick_and_ball_2014.jpg", width=200)
 st.title("Hockey Stick-in")
-st.write("Agregá productos a tu tienda de juego y jugá a comprar en el carrito.")
+st.write("Elegí productos y agregá al carrito")
 
 # ---------------------------
 # Formulario para agregar / editar productos
