@@ -51,11 +51,18 @@ if "editar_index" not in st.session_state:
     st.session_state.editar_index = None
 
 # ---------------------------
-# Cabecera con imagen local
+# Cabecera con imagen centrada y más pequeña
 # ---------------------------
-st.image("imagenes/palo.png", width=320)  # Imagen local
-st.title("Hockey Stick-in")
-st.write("Elegí productos y agregá al carrito")
+st.markdown(
+    """
+    <div style="text-align:center; margin-bottom:12px;">
+        <img src="imagenes/palo.png" style="width:100px; height:auto; margin-bottom:8px;">
+        <h1 style="color:#004080; margin:0;">Hockey Stick-in</h1>
+        <p style="color:#666666; margin:0;">Elegí productos y agregá al carrito</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # ---------------------------
 # Formulario para agregar / editar productos
