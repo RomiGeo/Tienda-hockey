@@ -23,7 +23,7 @@ def guardar_productos(productos):
 # ---------------------------
 # Configuración de página
 # ---------------------------
-st.set_page_config(page_title="Tienda de Hockey", page_icon="🏑", layout="wide")
+st.set_page_config(page_title="Hockey Stick-in", page_icon="🏑", layout="wide")
 
 # Estilos
 st.markdown(
@@ -53,8 +53,8 @@ if "editar_index" not in st.session_state:
 # ---------------------------
 # Cabecera
 # ---------------------------
-st.image("https://img.icons8.com/color/96/hockey.png", width=80)
-st.title("🏑 Tienda Virtual de Hockey 🎽")
+st.image("https://cdn.pixabay.com/photo/2016/11/29/12/54/field-hockey-1869989_1280.jpg", width=120)
+st.title("Hockey Stick-in")
 st.write("Agregá productos a tu tienda de juego y jugá a comprar en el carrito.")
 
 # ---------------------------
