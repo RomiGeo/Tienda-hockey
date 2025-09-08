@@ -31,7 +31,6 @@ st.markdown(
     <style>
     body {background-color: #eaf4fc;}
     .main {background-color: #ffffff; border-radius: 15px; padding: 20px;}
-    h1 {color: #004080;}
     .producto {border: 2px solid #004080; border-radius: 10px; padding: 10px; margin-bottom: 15px; background-color: #f0f8ff;}
     </style>
     """,
@@ -51,18 +50,11 @@ if "editar_index" not in st.session_state:
     st.session_state.editar_index = None
 
 # ---------------------------
-# Cabecera con imagen centrada y más pequeña
+# Cabecera centrada con imagen local
 # ---------------------------
-st.markdown(
-    """
-    <div style="text-align:center; margin-bottom:12px;">
-        <img src="imagenes/palo.png" style="width:100px; height:auto; margin-bottom:8px;">
-        <h1 style="color:#004080; margin:0;">Hockey Stick-in</h1>
-        <p style="color:#666666; margin:0;">Elegí productos y agregá al carrito</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.image("imagenes/palo.png", width=100)  # Imagen más pequeña
+st.markdown("<h1 style='text-align:center; color:#004080;'>Hockey Stick-in</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center; color:#666;'>Elegí productos y agregá al carrito</p>", unsafe_allow_html=True)
 
 # ---------------------------
 # Formulario para agregar / editar productos
