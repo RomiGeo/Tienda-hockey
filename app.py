@@ -25,9 +25,7 @@ def guardar_productos(productos):
 # ---------------------------
 st.set_page_config(page_title="Hockey Stick-in", page_icon="🏑", layout="wide")
 
-# ---------------------------
 # Estilos
-# ---------------------------
 st.markdown(
     """
     <style>
@@ -55,18 +53,9 @@ if "editar_index" not in st.session_state:
 # ---------------------------
 # Cabecera con imagen local
 # ---------------------------
-st.markdown(
-    """
-    <div style="text-align:center; margin-bottom: 18px;">
-        <img src="imagenes/palo.png"
-             alt="Palo de hockey sobre pasto"
-             style="max-width:320px; width:80%; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12);">
-        <h1 style="color:#004080; font-size:2.6em; margin:10px 0 4px 0;">Hockey Stick-in</h1>
-        <p style="color:#666666; margin:0 0 6px 0; font-size:1.05em;">Elegí productos y agregá al carrito</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.image("imagenes/palo.png", width=320)  # Imagen local
+st.title("Hockey Stick-in")
+st.write("Elegí productos y agregá al carrito")
 
 # ---------------------------
 # Formulario para agregar / editar productos
@@ -78,6 +67,8 @@ with st.expander("➕ Agregar o editar producto"):
         detalle = st.text_area("Detalles")
         imagen_archivo = st.file_uploader("Subí una imagen del producto", type=["png", "jpg", "jpeg"])
 
+        if st.session_state.editar_index is not None:
+            st.form_submit_button("Guardar cambios")
         agregar = st.form_submit_button("Agregar producto" if st.session_state.editar_index is None else "Guardar cambios")
 
         if agregar and nombre:
