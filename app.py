@@ -53,7 +53,7 @@ if "editar_index" not in st.session_state:
 # ---------------------------
 # Cabecera
 # ---------------------------
-st.image("https://upload.wikimedia.org/wikipedia/commons/0/0b/Field_hockey_stick_and_ball_2014.jpg", width=200)
+st.image("https://upload.wikimedia.org/wikipedia/commons/5/51/Hockey_stick_and_ball_on_grass.jpg", width=200))
 st.title("Hockey Stick-in")
 st.write("Elegí productos y agregá al carrito")
 
