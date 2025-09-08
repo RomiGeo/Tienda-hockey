@@ -25,7 +25,9 @@ def guardar_productos(productos):
 # ---------------------------
 st.set_page_config(page_title="Hockey Stick-in", page_icon="🏑", layout="wide")
 
+# ---------------------------
 # Estilos
+# ---------------------------
 st.markdown(
     """
     <style>
@@ -51,12 +53,12 @@ if "editar_index" not in st.session_state:
     st.session_state.editar_index = None
 
 # ---------------------------
-# Cabecera mejorada con imagen de GitHub
+# Cabecera con imagen local
 # ---------------------------
 st.markdown(
     """
     <div style="text-align:center; margin-bottom: 18px;">
-        <img src="https://github.com/RomiGeo/Tienda-hockey/raw/main/imagenes/palo_hockey.jpg"
+        <img src="imagenes/palo.png"
              alt="Palo de hockey sobre pasto"
              style="max-width:320px; width:80%; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12);">
         <h1 style="color:#004080; font-size:2.6em; margin:10px 0 4px 0;">Hockey Stick-in</h1>
@@ -76,8 +78,6 @@ with st.expander("➕ Agregar o editar producto"):
         detalle = st.text_area("Detalles")
         imagen_archivo = st.file_uploader("Subí una imagen del producto", type=["png", "jpg", "jpeg"])
 
-        if st.session_state.editar_index is not None:
-            st.form_submit_button("Guardar cambios")
         agregar = st.form_submit_button("Agregar producto" if st.session_state.editar_index is None else "Guardar cambios")
 
         if agregar and nombre:
